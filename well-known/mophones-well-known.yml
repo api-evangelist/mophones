@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://mophones.co/.well-known/
+host: https://mophones.co
+notes: >-
+  mophones.co is a Shopify-hosted storefront. The openid-configuration and oauth-authorization-server
+  documents are Shopify Customer Account OAuth (issuer shopify.com/authentication/69192515894), i.e.
+  platform infrastructure rather than a first-party Mophones authorization server. The /.well-known/ucp
+  document is the store's Universal Commerce Protocol merchant profile (canonical Shopify host
+  moshop-8956.myshopify.com), advertising a UCP-over-MCP shopping endpoint.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: application/json
+  file: mophones-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: application/json
+  file: mophones-oauth-authorization-server.json
+- path: /.well-known/ucp
+  status: 200
+  content_type: application/json
+  file: mophones-ucp.json
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

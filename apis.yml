@@ -1,7 +1,15 @@
 aid: mophones
 name: Mophones
-description: Mophones is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Mophones (MoPhones) is a Nairobi, Kenya based fintech and recommerce company building accessible
+  device-financing and re-commerce infrastructure for Africa, starting with premium refurbished
+  smartphones from brands like Apple and Samsung sold with flexible weekly-installment and
+  pay-on-delivery plans. The consumer storefront runs on Shopify at mophones.co and does not expose
+  a first-party developer API; its only programmatic surface is the Shopify-provided agentic-commerce
+  layer — a published Universal Commerce Protocol (UCP) profile at /.well-known/ucp and a live
+  UCP-over-MCP shopping endpoint at /api/ucp/mcp that lets buyer-approved AI shopping agents search
+  the catalog, build carts, and complete Shop Pay checkouts. Mophones is backed by Speedinvest and
+  was noted as the first African startup to secure NICE financing from STV.
 url: https://raw.githubusercontent.com/api-evangelist/mophones/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +17,68 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
+image: https://mophones.co/cdn/shop/files/MO-Logo-01-White-Background-Navy_Logo.jpg?v=1692099098
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- E-Commerce
+- Commerce
+- Agentic Commerce
+- Universal Commerce Protocol
+- MCP
+- Shopify
+- Fintech
+- Recommerce
+- Africa
+apis:
+- name: Mophones Agentic Commerce (UCP)
+  description: >-
+    The Shopify-native Universal Commerce Protocol (UCP) surface for the Mophones storefront —
+    a published UCP merchant profile plus a UCP-over-MCP shopping endpoint that agents use to
+    search the catalog, create carts, and complete buyer-approved checkouts. This is platform
+    (Shopify) infrastructure exposed on the mophones.co host, not a bespoke first-party API.
+  humanURL: https://mophones.co
+  baseURL: https://mophones.co
+  properties:
+  - type: MCPServer
+    url: mcp/mophones-mcp.yml
+  - type: WellKnown
+    url: well-known/mophones-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://mophones.co
+- type: LLMsTxt
+  url: llms/mophones-llms.txt
+- type: WellKnown
+  url: well-known/mophones-well-known.yml
+- type: MCPServer
+  url: mcp/mophones-mcp.yml
+- type: DomainSecurity
+  url: security/mophones-domain-security.yml
+- type: PrivacyPolicy
+  url: https://mophones.co/policies/privacy-policy
+- type: TermsOfService
+  url: https://mophones.co/policies/terms-of-service

@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://mophones.co/llms.txt
+discovery: https://mophones.co/.well-known/ucp
+notes: >-
+  Mophones does not run a bespoke MCP server; this is the Shopify-native Universal Commerce Protocol
+  (UCP) shopping endpoint exposed on the storefront. The endpoint is live but its tools/list method
+  requires an agent profile URI (UCP discovery) — calling it without one returns
+  error -32001 "UCP discovery failed / Missing profile uri". The tool surface below is transcribed
+  verbatim from the store's published /llms.txt agent-flow and the /.well-known/ucp capability list;
+  it is the standard UCP shopping tool family, not a Mophones-specific extension.
+server:
+  name: mophones-ucp-shopping
+  protocol: Universal Commerce Protocol (UCP)
+  transport: http
+  url: https://mophones.co/api/ucp/mcp
+  canonical_url: https://moshop-8956.myshopify.com/api/ucp/mcp
+  ucp_version: '2026-04-08'
+  supported_versions:
+  - '2026-04-08'
+  - '2026-01-23'
+  spec: https://ucp.dev/2026-04-08/specification/overview/
+  schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+  auth: buyer-approved checkout via Shop Pay; checkout requires contemporaneous human approval
+  rate_limited: true
+capabilities:
+- dev.ucp.shopping.catalog.search
+- dev.ucp.shopping.catalog.lookup
+- dev.ucp.shopping.cart
+- dev.ucp.shopping.checkout
+- dev.ucp.shopping.fulfillment
+- dev.ucp.shopping.discount
+- dev.ucp.shopping.order
+- dev.shopify.catalog
+tools:
+- name: search_catalog
+  description: Find products matching the buyer's intent across the store catalog.
+- name: create_cart
+  description: Create a cart and add desired items.
+- name: create_checkout
+  description: Start the purchase flow for a cart.
+- name: update_checkout
+  description: Set shipping address and method on an in-progress checkout.
+- name: complete_checkout
+  description: Finalize the purchase — buyer must explicitly approve payment.
