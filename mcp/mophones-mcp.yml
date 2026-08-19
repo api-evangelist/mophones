@@ -3,13 +3,12 @@ method: searched
 status: published
 source: https://mophones.co/llms.txt
 discovery: https://mophones.co/.well-known/ucp
-notes: >-
-  Mophones does not run a bespoke MCP server; this is the Shopify-native Universal Commerce Protocol
-  (UCP) shopping endpoint exposed on the storefront. The endpoint is live but its tools/list method
-  requires an agent profile URI (UCP discovery) — calling it without one returns
-  error -32001 "UCP discovery failed / Missing profile uri". The tool surface below is transcribed
-  verbatim from the store's published /llms.txt agent-flow and the /.well-known/ucp capability list;
-  it is the standard UCP shopping tool family, not a Mophones-specific extension.
+notes: Mophones does not run a bespoke MCP server; this is the Shopify-native Universal Commerce Protocol
+  (UCP) shopping endpoint exposed on the storefront. The endpoint is live but its tools/list method requires
+  an agent profile URI (UCP discovery) — calling it without one returns error -32001 "UCP discovery failed
+  / Missing profile uri". The tool surface below is transcribed verbatim from the store's published /llms.txt
+  agent-flow and the /.well-known/ucp capability list; it is the standard UCP shopping tool family, not
+  a Mophones-specific extension.
 server:
   name: mophones-ucp-shopping
   protocol: Universal Commerce Protocol (UCP)
@@ -44,3 +43,11 @@ tools:
   description: Set shipping address and method on an in-progress checkout.
 - name: complete_checkout
   description: Finalize the purchase — buyer must explicitly approve payment.
+deployment:
+  mode: remote
+  endpoint: https://mophones.co/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
