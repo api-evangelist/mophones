@@ -67,12 +67,14 @@ apis:
     search the catalog, create carts, and complete buyer-approved checkouts. This is platform
     (Shopify) infrastructure exposed on the mophones.co host, not a bespoke first-party API.
   humanURL: https://mophones.co
-  baseURL: https://mophones.co
   properties:
   - type: MCPServer
     url: mcp/mophones-mcp.yml
   - type: WellKnown
     url: well-known/mophones-well-known.yml
+  x-surface: platform-generated
+  x-platform: shopify
+  x-platform-surface: ucp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
