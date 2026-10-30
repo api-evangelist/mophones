@@ -64,6 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mophones is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Mophones (MoPhones) is a Nairobi, Kenya based fintech and recommerce company building accessible device-financing and re-commerce infrastructure for Africa, starting with premium refurbished smartphones from brands like Apple and Samsung sold with flexible weekly-installment and pay-on-delivery plans. The consumer storefront runs on Shopify at mophones.co and does not expose a first-party developer API; its only programmatic surface is the Shopify-provided agentic-commerce layer — a published Universal Commerce Protocol (UCP) profile at /.well-known/ucp and a live UCP-over-MCP shopping endpoint at /api/ucp/mcp that lets buyer-approved AI shopping agents search the catalog, build carts, and complete Shop Pay checkouts. Mophones is backed by Speedinvest and was noted as the first African startup to secure NICE financing from STV.
 
-Backed by: speedinvest
+**Areas:** Company · E-Commerce · Commerce · Agentic Commerce · Universal Commerce Protocol · MCP · Shopify · Fintech · Recommerce · Africa
+
+## Mophones on APIs.io
+
+Everything profiled for Mophones is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mophones/](https://apis.io/providers/mophones/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mophones Agentic Commerce (UCP)](https://apis.io/apis/mophones/mophones-agentic-commerce-ucp/) — The Shopify-native Universal Commerce Protocol (UCP) surface for the Mophones storefront — a published UCP merchant profile plus a UCP-over-MCP shopping…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [mophones-ucp-shopping](https://apis.io/servers/mophones/mophones-ucp-shopping/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mophones Domain Security](https://apis.io/security/mophones/mophones-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mophones.co)
+- [Terms of service](https://mophones.co/policies/terms-of-service)
+- [Privacy policy](https://mophones.co/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 11.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 13.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mophones/](https://apis.io/providers/mophones/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mophones: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mophones/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
